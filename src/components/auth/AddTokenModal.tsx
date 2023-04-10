@@ -28,7 +28,7 @@ export default function AddTokenModal({ className }: Props) {
 
   return (
     <>
-      <button
+      {/* <button
         className={`hidden rounded bg-green-500 p-4 text-white hover:bg-green-600 md:block ${className}`}
         onClick={() => setOpen(true)}
       >
@@ -102,7 +102,7 @@ export default function AddTokenModal({ className }: Props) {
             </form>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 }

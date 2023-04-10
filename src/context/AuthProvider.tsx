@@ -13,8 +13,10 @@ const AuthContext = React.createContext<{
   clearToken: () => void;
 }>(defaultContext);
 
+const default_token = process.env.NEXT_PUBLIC_AZURE_TOKEN
+
 export const AuthProvider = ({ children }: PropsWithChildren) => {
-  const [token, setToken] = React.useState("");
+  const [token, setToken] = React.useState(default_token);
 
   React.useEffect(() => {
     const token = secureLocalStorage.getItem("open-ai-token") as string;

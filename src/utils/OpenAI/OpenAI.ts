@@ -25,9 +25,10 @@ export const getOpenAICompletion = async (
   const encoder = new TextEncoder();
   const decoder = new TextDecoder();
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+  const response = await fetch("https://drcdasopenai.openai.azure.com/openai/deployments/chat-gpt/chat/completions?api-version=2023-03-15-preview", {
     headers: {
-      Authorization: `Bearer ${token}`,
+      // Authorization: `Bearer ${token}`,
+      "api-key":`${token}`,
       "Content-Type": "application/json",
     },
     method: "POST",

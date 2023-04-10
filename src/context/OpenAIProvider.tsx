@@ -238,7 +238,7 @@ export default function OpenAIProvider({ children }: PropsWithChildren) {
   const submit = useCallback(
     async (messages_: OpenAIChatMessage[] = []) => {
       if (loading) return;
-      setLoading(true);
+      setLoading(false);
 
       messages_ = messages_.length ? messages_ : messages;
 
