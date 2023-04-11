@@ -8,7 +8,7 @@ const defaultContext = {
 };
 
 const AuthContext = React.createContext<{
-  token: string;
+  token: any;
   addToken: (token: string) => void;
   clearToken: () => void;
 }>(defaultContext);

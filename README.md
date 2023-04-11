@@ -27,6 +27,12 @@ yarn dev
 
 This will start a local server on port 3000. You can then navigate to `localhost:3000` to view the project!
 
+## Docker
+```
+docker build --build-arg NEXT_PUBLIC_AZURE_TOKEN=AZURE_TOKEN -t play-gpt .
+docker run -it -p PORT:3000 play-gpt
+```
+
 ## Contributing
 
 **This project is still in development! Contributions are very much appreciated!**
